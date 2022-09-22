@@ -31,7 +31,7 @@ import fs from "fs";
         .status(200)
         .sendFile(filteredPath, () => deleteLocalFiles([filteredPath]));
     } catch (error) {
-      res.status(400).send("Error on image processing");
+      res.status(422).send("Error on image processing");
     }
   });
 
